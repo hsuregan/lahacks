@@ -7,6 +7,28 @@ button:focus {
     outline: none;
 }
 
+
+
+
+#weather_date1, #weather_date2, #weather_date3, #weather_date4, #weather_date5, #weather_date6
+{
+	width: 50% !important;
+}
+
+.weather_date
+{
+	width: 40% !important;
+	background-color: pink !important;
+}
+
+#forcast
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	background-color: yellow;
+}
+
 #dest
 {
 	color: #006400 !important;

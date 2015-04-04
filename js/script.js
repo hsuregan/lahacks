@@ -3,7 +3,7 @@
 					//average price of a can of coke
 					//average price of a one night stay in major cities
 					//MAJOR CITIES
-					dest["weather"] = "RAIN";
+					dest["weather"] = ["RAIN", "CLEAR_DAY", "WIND", "CLEAR_DAY", "FOG", "SLEET"];
 					dest["currency"] = "eur";
 					dest["name"] = "Mündchen";
 					dest["capital"] = "berlin";
@@ -28,12 +28,13 @@
 						$.ajax({
 								url: "http://devel.farebookings.com/api/curconversor/"+from+"/"+to+"/1/",
 								dataType: 'jsonp',
-								success: function (data) {
+								success: function (data) 
+								{
 									//alert(data[to]);
 									document.getElementById("currency").innerHTML = document.getElementById("currency").innerHTML + "<br /> 1 " + from + " = " + data[to] + " " + to;
 									//$('#currency').innerHTML = data[to];
 									//alert(ugh);
-					        }
+					        	}
 							}
 					); 
 
@@ -47,7 +48,7 @@
 					//console.log(x);
 					//x.innerHTML =germany["name"];
 					//x.style.color = "blue"; //one way of color change
-					$('#currency').css("background-color", "yellow"); //another way 
+					//$('#currency').css("background-color", "yellow"); //another way 
 					//alert(ugh);
 					//$('#currency').html = exchange;
 					//x.css("color", "yellow");
