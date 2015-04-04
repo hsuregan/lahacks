@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+	</head>
+	<body>
+	<canvas id="icon1" width="128" height="128"></canvas>
+<canvas id="icon2" width="128" height="128"></canvas>
+
+<script>
+  var skycons = new Skycons({"color": "pink"});
+  // on Android, a nasty hack is needed: {"resizeClear": true}
+
+  // you can add a canvas by it's ID...
+  skycons.add("icon1", Skycons.PARTLY_CLOUDY_DAY);
+
+  // ...or by the canvas DOM element itself.
+  skycons.add(document.getElementById("icon2"), Skycons.RAIN);
+
+  // if you're using the Forecast API, you can also supply
+  // strings: "partly-cloudy-day" or "rain".
+
+  // start animation!
+  skycons.play();
+
+  // you can also halt animation with skycons.pause()
+
+  // want to change the icon? no problem:
+  skycons.set("icon1", Skycons.PARTLY_CLOUDY_NIGHT);
+
+  // want to remove one altogether? no problem:
+  skycons.remove("icon2");
+</script>
+
+<script>
+
+      var icons = new Skycons(),
+          list  = [
+            "clear-day", "clear-night", "partly-cloudy-day",
+            "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+            "fog"
+          ],
+          i;
+
+      for(i = list.length; i--; )
+        icons.set(list[i], list[i]);
+
+      icons.play();
+    
+</script>
+	</body>
+</html>

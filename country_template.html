@@ -14,14 +14,23 @@
 		<script src="js/modernizr.custom.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-		<script src="script.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/skycons.js"></script>
+		<script src="js/get_weather.js"></script>
 		<!--geobytes-->
 		<script src="http://gd.geobytes.com/geoif" language="javascript"></script>
 
 
 	</head>
 	<body>
+
+
+
+
+
+
 		<div class="container">
+		<div id="back"> &nbsp;  ↫</div>
 			<br />
 			<br />
 			<div id = "destination">DESTINATION</div>
@@ -38,7 +47,9 @@
 				</li>
 				<li>
 					<div class="tile" id="weather">						
-					<div class="tile_title">Weather</div></div>
+					<div class="tile_title">Weather</div>
+						<canvas id="icon1" width="256" height="256"></canvas>
+					</div>
 				</li>
 				<li>
 					<div class="tile" id="wiki">
@@ -60,106 +71,18 @@
 						<div class="tile_title">Major City 3</div>
 					</div>
 				</li>
-
-
-				<!-- <li><a href="http://drbl.in/fHaa"><img src="images/13.png"></a></li>
-				<li><a href="http://drbl.in/gXMo"><img src="images/10.png"></a></li>
-				<li><a href="http://drbl.in/gXMn"><img src="images/11.png"></a></li>
-				<li><a href="http://drbl.in/fzYo"><img src="images/2.jpg"></a></li>
-				<li><a href="http://drbl.in/fARU"><img src="images/14.png"></a></li>
-				<li><a href="http://drbl.in/fWMM"><img src="images/1.jpg"></a></li>
-				<li><a href="http://drbl.in/fWPV"><img src="images/3.jpg"></a></li>
-				<li><a href="http://drbl.in/fWMT"><img src="images/4.jpg"></a></li>
-				<li><a href="http://drbl.in/fGhI"><img src="images/5.jpg"></a></li>
-				<li><a href="http://drbl.in/fKCf"><img src="images/6.jpg"></a></li>
-				<li><a href="http://drbl.in/fLBG"><img src="images/7.jpg"></a></li>
-				<li><a href="http://drbl.in/fPEY"><img src="images/8.jpg"></a></li>
-				<li><a href="http://drbl.in/fWwG"><img src="images/9.jpg"></a></li>
-				<li><a href="http://drbl.in/fQdt"><img src="images/12.png"></a></li>
-				<li><a href="http://drbl.in/fHaa"><img src="images/13.png"></a></li>
-				<li><a href="http://drbl.in/gXMo"><img src="images/10.png"></a></li>
-				<li><a href="http://drbl.in/gXMn"><img src="images/11.png"></a></li>
-				<li><a href="http://drbl.in/fzYo"><img src="images/2.jpg"></a></li>
-				<li><a href="http://drbl.in/fARU"><img src="images/14.png"></a></li>
-				<li><a href="http://drbl.in/fWMM"><img src="images/1.jpg"></a></li>
-				<li><a href="http://drbl.in/fWPV"><img src="images/3.jpg"></a></li>
-				<li><a href="http://drbl.in/fWMT"><img src="images/4.jpg"></a></li>
-				<li><a href="http://drbl.in/fGhI"><img src="images/5.jpg"></a></li>
-				<li><a href="http://drbl.in/fKCf"><img src="images/6.jpg"></a></li>
-				<li><a href="http://drbl.in/fLBG"><img src="images/7.jpg"></a></li>
-				<li><a href="http://drbl.in/fPEY"><img src="images/8.jpg"></a></li>
-				<li><a href="http://drbl.in/fWwG"><img src="images/9.jpg"></a></li>
-				<li><a href="http://drbl.in/fQdt"><img src="images/12.png"></a></li>
-				<li><a href="http://drbl.in/fHaa"><img src="images/13.png"></a></li>
-				<li><a href="http://drbl.in/gXMo"><img src="images/10.png"></a></li>
-				<li><a href="http://drbl.in/gXMn"><img src="images/11.png"></a></li>
-				<li><a href="http://drbl.in/fzYo"><img src="images/2.jpg"></a></li>
-				<li><a href="http://drbl.in/fARU"><img src="images/14.png"></a></li>
-				<li><a href="http://drbl.in/fWMM"><img src="images/1.jpg"></a></li>
-				<li><a href="http://drbl.in/fWPV"><img src="images/3.jpg"></a></li>
-				<li><a href="http://drbl.in/fWMT"><img src="images/4.jpg"></a></li>
-				<li><a href="http://drbl.in/fGhI"><img src="images/5.jpg"></a></li>
-				<li><a href="http://drbl.in/fKCf"><img src="images/6.jpg"></a></li>
-				<li><a href="http://drbl.in/fLBG"><img src="images/7.jpg"></a></li>
-				<li><a href="http://drbl.in/fPEY"><img src="images/8.jpg"></a></li>
-				<li><a href="http://drbl.in/fWwG"><img src="images/9.jpg"></a></li>
-				<li><a href="http://drbl.in/fQdt"><img src="images/12.png"></a></li>
-				<li><a href="http://drbl.in/fHaa"><img src="images/13.png"></a></li>
-				<li><a href="http://drbl.in/gXMo"><img src="images/10.png"></a></li>
-				<li><a href="http://drbl.in/gXMn"><img src="images/11.png"></a></li>
-				<li><a href="http://drbl.in/fzYo"><img src="images/2.jpg"></a></li>
-				<li><a href="http://drbl.in/fARU"><img src="images/14.png"></a></li>
-				<li><a href="http://drbl.in/fWMM"><img src="images/1.jpg"></a></li>
-				<li><a href="http://drbl.in/fWPV"><img src="images/3.jpg"></a></li>
-				<li><a href="http://drbl.in/fWMT"><img src="images/4.jpg"></a></li>
-				<li><a href="http://drbl.in/fGhI"><img src="images/5.jpg"></a></li>
-				<li><a href="http://drbl.in/fKCf"><img src="images/6.jpg"></a></li>
-				<li><a href="http://drbl.in/fLBG"><img src="images/7.jpg"></a></li>
-				<li><a href="http://drbl.in/fPEY"><img src="images/8.jpg"></a></li>
-				<li><a href="http://drbl.in/fWwG"><img src="images/9.jpg"></a></li>
-				<li><a href="http://drbl.in/fQdt"><img src="images/12.png"></a></li>
-				<li><a href="http://drbl.in/fHaa"><img src="images/13.png"></a></li>
-				<li><a href="http://drbl.in/gXMo"><img src="images/10.png"></a></li>
-				<li><a href="http://drbl.in/gXMn"><img src="images/11.png"></a></li>
-				<li><a href="http://drbl.in/fzYo"><img src="images/2.jpg"></a></li>
-				<li><a href="http://drbl.in/fARU"><img src="images/14.png"></a></li>
-				<li><a href="http://drbl.in/fWMM"><img src="images/1.jpg"></a></li>
-				<li><a href="http://drbl.in/fWPV"><img src="images/3.jpg"></a></li>
-				<li><a href="http://drbl.in/fWMT"><img src="images/4.jpg"></a></li>
-				<li><a href="http://drbl.in/fGhI"><img src="images/5.jpg"></a></li>
-				<li><a href="http://drbl.in/fKCf"><img src="images/6.jpg"></a></li>
-				<li><a href="http://drbl.in/fLBG"><img src="images/7.jpg"></a></li>
-				<li><a href="http://drbl.in/fPEY"><img src="images/8.jpg"></a></li>
-				<li><a href="http://drbl.in/fWwG"><img src="images/9.jpg"></a></li>
-				<li><a href="http://drbl.in/fQdt"><img src="images/12.png"></a></li>
-				<li><a href="http://drbl.in/fHaa"><img src="images/13.png"></a></li>
-				<li><a href="http://drbl.in/gXMo"><img src="images/10.png"></a></li>
-				<li><a href="http://drbl.in/gXMn"><img src="images/11.png"></a></li>
-				<li><a href="http://drbl.in/fzYo"><img src="images/2.jpg"></a></li>
-				<li><a href="http://drbl.in/fARU"><img src="images/14.png"></a></li>
-				<li><a href="http://drbl.in/fWMM"><img src="images/1.jpg"></a></li>
-				<li><a href="http://drbl.in/fWPV"><img src="images/3.jpg"></a></li>
-				<li><a href="http://drbl.in/fWMT"><img src="images/4.jpg"></a></li>
-				<li><a href="http://drbl.in/fGhI"><img src="images/5.jpg"></a></li>
-				<li><a href="http://drbl.in/fKCf"><img src="images/6.jpg"></a></li>
-				<li><a href="http://drbl.in/fLBG"><img src="images/7.jpg"></a></li>
-				<li><a href="http://drbl.in/fPEY"><img src="images/8.jpg"></a></li>
-				<li><a href="http://drbl.in/fWwG"><img src="images/9.jpg"></a></li>
-				<li><a href="http://drbl.in/fWPV"><img src="images/3.jpg"></a></li>
-				<li><a href="http://drbl.in/fGhI"><img src="images/5.jpg"></a></li>
-				<li><a href="http://drbl.in/fzYo"><img src="images/2.jpg"></a></li> -->
 			</ul>
 		</div>
 
+<script>
 
-	<script>
-	$(document).ready(function() {
+</script>
 
-		$("#template").load("template.html");
-		
-	}
-	);
-	</script>
+
+
+
+
+
 
 
 

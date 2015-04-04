@@ -1,20 +1,25 @@
-		$(document).ready(
-
-				function(){
-					
 					var dest = {};
 					var origin = {};
 					//average price of a can of coke
 					//average price of a one night stay in major cities
 					//MAJOR CITIES
-
+					dest["weather"] = "RAIN";
 					dest["currency"] = "eur";
-					dest["name"] = "Germany";
+					dest["name"] = "Mündchen";
 					dest["capital"] = "berlin";
 
+					origin["weather"] = "sunny";
 					origin["currency"] = "usd";
-					origin["name"] = "USA";
+					origin["name"] = "LA";
 					origin["capital"] = "washington dc";
+
+		$(document).ready(
+
+
+
+				function(){
+					
+
 
 
 					document.getElementById("destination").innerHTML = origin["name"] + " &nbsp; &nbsp;  ✈  &nbsp; &nbsp; " + dest["name"];
