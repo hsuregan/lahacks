@@ -115,9 +115,12 @@ function getTemps(latitude, longitude, city, country)
 {
 	var url_forcast = "https://api.forecast.io/forecast/706c386921e262c76e7f8801b02e8c85/" + latitude + "," + longitude;
 	console.log("url is ", url_forcast);
+	url_forcast = "https://api.forecast.io/forecast/706c386921e262c76e7f8801b02e8c85/48.856614,2.3522219";
+
 
 	$.getJSON(url_forcast, function (json)
 	{
+
 				console.log("In getTemps json function");
 		    	var maxTemp = json.daily[0].results[0].temperatureMax;
 		    	var minTemp = json.daily[0].results[0].temperatureMin;
@@ -140,8 +143,26 @@ function get_high_low(city, country)
 
 		    console.log('Latitude : ', latitude);
 		    console.log('Longitude : ', longitude);
+		    		//getTemps(latitude, longitude, city, country);
+		    b(latitude, longitude);
+
 
 		});
 
-		getTemps(latitude, longitude, city, country);
 }
+
+
+
+       function b(latitude, longitude){
+
+            var apiKey = '706c386921e262c76e7f8801b02e8c85';
+            var url = 'https://api.forecast.io/forecast/';
+            var lati = latitude;
+            var longi = longitude;
+            var data;
+
+            $.getJSON(url + apiKey + "/" + lati + "," + longi + "?callback=?", function(data) {
+              console.log(data.currently.temperature);
+              //$('#weather').html('and the temperature is: ' + data.currently.temperature);
+            });
+        }
