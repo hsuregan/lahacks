@@ -29,7 +29,7 @@ function timeConverter(UNIX_timestamp){
 
        function b(latitude, longitude){
 
-            var apiKey = '706c386921e262c76e7f8801b02e8c85';
+            //var apiKey = '706c386921e262c76e7f8801b02e8c85';
             var url = 'https://api.forecast.io/forecast/';
             var lati = latitude;
             var longi = longitude;

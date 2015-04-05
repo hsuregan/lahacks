@@ -17,6 +17,8 @@
 		<script src="js/script.js"></script>
 		<script src="js/skycons.js"></script>
 		<script src="js/get_weather.js"></script>
+		<script src="js/fill_details.js"></script>
+
 		<!--geobytes-->
 		<script src="http://gd.geobytes.com/geoif" language="javascript"></script>
 		<style>
@@ -66,24 +68,29 @@
 		<style>
 			#back
 			{
+				margin-left: 10px;
 				text-decoration: none;
 				color: blue;
+				font-style: bold;
 
 
 			}
 		</style>
-		<div id="back"> &nbsp;  <a id ="back" href="form.html">↫ </a></div>
+		<div id="back"> &nbsp; &nbsp; &#160; &#160; &nbsp;  <a id ="back" href="form.html">↫ </a></div>
 			<br />
 			<br />
 			<div id = "destination">DESTINATION</div>
 			<ul class="grid effect-1" id="grid">
 				<li>
-					<div class="tile" id="currency" style="height: 150px !important">
-						<div class="tile_title">Currency</div>
+					<div class="tile" id="currency" style="height: 180px !important;">
+					<br />
+						<div class="tile_title" style="margin-bottom: -10px">Currency</div>
 					</div>
 				</li>
 				<li>
 					<div class="tile" id="flights">
+										<br />
+
 						<div class="tile_title">Flights</div>
 					</div>
 				</li>
@@ -158,17 +165,17 @@
 
 				<li>
 					<div class="tile" id="Demographics" style="padding: 10px;" >
-					<div class="tile_title">Details</div><br />
+						<div class="tile_title" >Details</div><br />
 
-						<div class="tile_title" id="population" style="font-size: 20px !important; text-align: left">Time Zone:</div>
+						<div class="tile_title" id="time_zone" style="font-size: 20px !important; text-align: left">Time Zone:</div>
 
 						<div class="tile_title" id="population" style="font-size: 20px !important; text-align: left">Population:</div>
-						<div class="tile_title" id="density" style="font-size: 20px !important; text-align: left">Population Density:</div>
+						<div class="tile_title" id="pop_density" style="font-size: 20px !important; text-align: left">Population Density:</div>
 
-						<div class="tile_title" id="density" style="font-size: 20px !important; text-align: left">Elevation:</div>
-						<div class="tile_title" id="density" style="font-size: 20px !important; text-align: left">Postal Code:</div>
-						<div class="tile_title" id="density" style="font-size: 20px !important; text-align: left">Latitude:</div>
-						<div class="tile_title" id="density" style="font-size: 20px !important; text-align: left">Longitude:</div>
+						<div class="tile_title" id="elevation" style="font-size: 20px !important; text-align: left">Elevation:</div>
+						<div class="tile_title" id="postal_code" style="font-size: 20px !important; text-align: left">Postal Code:</div>
+						<div class="tile_title" id="dlatitude" style="font-size: 20px !important; text-align: left">Latitude:</div>
+						<div class="tile_title" id="dlongitude" style="font-size: 20px !important; text-align: left">Longitude:</div>
 						<style>
 						#website_link
 						{
@@ -176,7 +183,7 @@
 							color: white !important;
 						}
 						</style>
-						<div class="tile_title" id="website" style="font-size: 20px !important; text-align: left"><a href="www.google.com" id="website_link">website.com</a></div>
+						<center><div class="tile_title" id="website" style="font-size: 20px !important; text-align: center"><a href="www.google.com" id="website_link"></a></div></center>
 
 					</div>
 				</li>
@@ -188,10 +195,10 @@
 					</div>
 				</li>
 
-				<li>
-									<div class="tile" id="Abstract" style="font-size: 15px !important; height: 415px; overflow: hidden" >
+				<li>	
+					<div class="tile" id="flag" style="font-size: 15px !important; height: 415px; overflow: hidden" >
+						<div id="flag_name" class="tile_title" style="background-color: white; color: blue">FLAG of &nbsp;</div>
 
-				<iframe src="http://en.wikipedia.org/wiki/Los_Angeles#/media/File:Flag_of_Los_Angeles,_California.svg" width="100%" height="500" margin="0" padding="0" border="none" overflow="hidden" scrolling="no"></iframe>
 				</div>
 				</li>
 			</ul>

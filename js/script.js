@@ -5,26 +5,42 @@
 					//MAJOR CITIES
 					dest["weather"] = ["RAIN", "CLEAR_DAY", "WIND", "CLEAR_DAY", "FOG", "SLEET"];
 					dest["currency"] = "eur";
-					dest["name"] = "kaohsiung";
-					dest["capital"] = "kaohsiung";
-					dest["country"] = "taiwan";
+					dest["name"] = "nanjing";
+					dest["capital"] = "nanjing";
+					dest["country"] = "china";
+					dest["Time Zone"] = "IDK"
+					dest["Elevation"] = "80"
+					dest["latitude"] = 80;
+					dest["longitude"] = 80;
+					dest["population"] = 100000;
+										dest["pop dens"] = 546456;
+
+					dest["Postal Code"] = 80930;
+										dest["website"] = "www.kaohsiung.com";
+										dest["flag"] = "http://en.wikipedia.org/wiki/Los_Angeles#/media/File:Flag_of_Los_Angeles,_California.svg";
+
+
 
 					origin["weather"] = "sunny";
 					origin["currency"] = "usd";
 					origin["name"] = "LA";
 					origin["capital"] = "washington dc";
 					origin["country"] = "usa";
+					origin["Time Zone"] = "IDK"
+					origin["Elevation"] = "80"
+					origin["latitude"] = 80;
+					origin["longitude"] = 80;
+					origin["population"] = 100000;
+															origin["pop dens"] = 100000;
+
 
 		$(document).ready(
 
 
 
 				function(){
-					
 
-
-
-					document.getElementById("destination").innerHTML = origin["name"] + " &nbsp; &nbsp;  ✈  &nbsp; &nbsp; " + dest["name"];
+					document.getElementById("destination").innerHTML = "<span style='color: #00FFFF'>" + origin["name"] + "</span>"+" &nbsp; <span style='color: #00CCFF'>  ✈ </span> &nbsp; <span style='color: #0099FF'>  ✈ </span> &nbsp; <span style='color: #0066ff'>  ✈ </span> &nbsp; " + dest["name"];
 					var to = dest["currency"];
 					var from = origin["currency"];
 						$.ajax({
@@ -33,7 +49,7 @@
 								success: function (data) 
 								{
 									//alert(data[to]);
-									document.getElementById("currency").innerHTML = document.getElementById("currency").innerHTML + "<br /> 1 " + from + " = " + data[to] + " " + to;
+									document.getElementById("currency").innerHTML = document.getElementById("currency").innerHTML + "<span style='font-size: 25px !important; padding-bottom: 10px !important'><br /> 1 " + from + " = " + data[to] + " " + to + "</span>";
 									//document.getElementById("currency").style.size = "25px";
 									//$('#currency').innerHTML = data[to];
 									//alert(ugh);
