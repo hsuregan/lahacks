@@ -2,9 +2,10 @@
 
 			function()
 			{
+				console.log("this is the weather:");
 				console.log(dest["weather"]);
-				get_next_7_day_forcast(dest["weather"]);
-				var ugh = get_high_low("paris", "france");
+				//get_next_7_day_forcast(dest["weather"]);
+				get_high_low(dest["name"], dest["country"]);
 				console.log("poop");
 
 			}
@@ -59,23 +60,23 @@ function timeConverter(UNIX_timestamp){
         }
 
 
-function getTemps(latitude, longitude, city, country)
-{
-	var url_forcast = "https://api.forecast.io/forecast/706c386921e262c76e7f8801b02e8c85/" + latitude + "," + longitude;
-	console.log("url is ", url_forcast);
-	url_forcast = "https://api.forecast.io/forecast/706c386921e262c76e7f8801b02e8c85/48.856614,2.3522219";
+// function getTemps(latitude, longitude, city, country)
+// {
+// 	var url_forcast = "https://api.forecast.io/forecast/706c386921e262c76e7f8801b02e8c85/" + latitude + "," + longitude;
+// 	console.log("url is ", url_forcast);
+// 	url_forcast = "https://api.forecast.io/forecast/706c386921e262c76e7f8801b02e8c85/48.856614,2.3522219";
 
 
-	$.getJSON(url_forcast, function (json)
-	{
+// 	$.getJSON(url_forcast, function (json)
+// 	{
 
-				console.log("In getTemps json function");
-		    	var maxTemp = json.daily[0].results[0].temperatureMax;
-		    	var minTemp = json.daily[0].results[0].temperatureMin;
-		    	console.log('Max temp: ', maxTemp);
-		    	console.log('Min temp: ', minTemp);
-	});
-}
+// 				console.log("In getTemps json function");
+// 		    	var maxTemp = json.daily[0].results[0].temperatureMax;
+// 		    	var minTemp = json.daily[0].results[0].temperatureMin;
+// 		    	console.log('Max temp: ', maxTemp);
+// 		    	console.log('Min temp: ', minTemp);
+// 	});
+// }
 
 function get_high_low(city, country)
 {

@@ -5,13 +5,15 @@
 					//MAJOR CITIES
 					dest["weather"] = ["RAIN", "CLEAR_DAY", "WIND", "CLEAR_DAY", "FOG", "SLEET"];
 					dest["currency"] = "eur";
-					dest["name"] = "Mündchen";
-					dest["capital"] = "berlin";
+					dest["name"] = "kaohsiung";
+					dest["capital"] = "kaohsiung";
+					dest["country"] = "taiwan";
 
 					origin["weather"] = "sunny";
 					origin["currency"] = "usd";
 					origin["name"] = "LA";
 					origin["capital"] = "washington dc";
+					origin["country"] = "usa";
 
 		$(document).ready(
 
@@ -32,6 +34,7 @@
 								{
 									//alert(data[to]);
 									document.getElementById("currency").innerHTML = document.getElementById("currency").innerHTML + "<br /> 1 " + from + " = " + data[to] + " " + to;
+									//document.getElementById("currency").style.size = "25px";
 									//$('#currency').innerHTML = data[to];
 									//alert(ugh);
 					        	}
