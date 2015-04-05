@@ -8,7 +8,7 @@
 					dest["name"] = "nanjing";
 					dest["capital"] = "nanjing";
 					dest["country"] = "china";
-					dest["Time Zone"] = "IDK"
+					dest["Time Zone"] = ""
 					dest["Elevation"] = "80"
 					dest["latitude"] = 80;
 					dest["longitude"] = 80;
@@ -17,7 +17,7 @@
 
 					dest["Postal Code"] = 80930;
 										dest["website"] = "www.kaohsiung.com";
-										dest["flag"] = "http://en.wikipedia.org/wiki/Los_Angeles#/media/File:Flag_of_Los_Angeles,_California.svg";
+										dest["flag"] = "";
 
 
 

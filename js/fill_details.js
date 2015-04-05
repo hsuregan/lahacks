@@ -38,19 +38,50 @@
 
 			function()
 			{
-				$('#time_zone').append("&nbsp;" + dest["Time Zone"]);
-				$('#population').append("&nbsp;" + dest["population"]);
-								$('#pop_density').append("&nbsp;" + dest["pop dens"]);
 
-				$('#elevation').append("&nbsp;" + dest["Elevation"]);
-				$('#postal_code').append("&nbsp;" + dest["Postal Code"]);
-				$('#dlatitude').append("&nbsp;" + dest["latitude"]);
-				$('#dlongitude').append("&nbsp;" + dest["longitude"]);
-				$('#website_link').append(dest["website"]);
-				$('#flag_name').append(dest["name"]);
-				$('#flag').append('<iframe src="' + dest["flag"] + '"width="100%" height="500" margin="0" padding="0" border="none" overflow="hidden" scrolling="no"></iframe>');
+				if(dest["Time Zone"].length != 0)
+					$('#time_zone').append("Time Zone: &nbsp;" + dest["Time Zone"]);
+
+				if(dest["population"].length != 0)
+					$('#population').append("Population: &nbsp;" + dest["population"]);
+				
+				if(dest["pop dens"].length != 0)
+					$('#pop_density').append("Population Density: &nbsp;" + dest["pop dens"]);
+
+				if(dest["Elevation"].length != 0)
+					$('#elevation').append("Elevation: &nbsp;" + dest["Elevation"]);
+
+				if(dest["Postal Code"].length != 0)
+					$('#postal_code').append("Postal Code: &nbsp;" + dest["Postal Code"]);
+				
+				if(dest["latitude"].length != 0)
+					$('#dlatitude').append("Latitude: &nbsp;" + dest["latitude"]);
+			
+				if(dest["longitude"].length != 0)
+					$('#dlongitude').append("Longitude: &nbsp;" + dest["longitude"]);
+				
+				if(dest["website"].length != 0)
+					$('#website').append('<a id="website_link" href="' + dest["website"] + '">' + dest["website"] + '<br />');
+				
+				if(dest["flag"].length != 0)
+				{
+					$('#flag').append('<iframe src="' + dest["flag"] + '"width="100%" height="500" margin="0" padding="0" border="none" overflow="hidden" scrolling="no"></iframe>');
+					var element = document.getElementById("flag");
+					element.parentNode.removeChild(element);
+
+				}
+
+				else if(dest["flag"].length == 0)
+				{
+					var element = document.getElementById("wiki_images");
+					element.parentNode.removeChild(element);
+				}
 
 				//document.getElementsByTagName('website_link').innerHTML = "poop";//dest["website"];
+				$('#Demographics').css('padding-bottom', '25px');
+								$('#Demographics').css('background-color', 'blue');
+
+
 
 
 				// document.getElementsByTagName('time_zone').innerHTML = 	document.getElementsByTagName('time_zone').innerHTML + " " + dest["Time Zone"];
