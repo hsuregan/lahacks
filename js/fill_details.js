@@ -66,8 +66,7 @@
 				if(dest["flag"].length != 0)
 				{
 					$('#flag').append('<iframe src="' + dest["flag"] + '"width="100%" height="500" margin="0" padding="0" border="none" overflow="hidden" scrolling="no"></iframe>');
-					var element = document.getElementById("flag");
-					element.parentNode.removeChild(element);
+
 
 				}
 

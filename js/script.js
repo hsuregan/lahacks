@@ -17,7 +17,7 @@
 
 					dest["Postal Code"] = 80930;
 										dest["website"] = "www.kaohsiung.com";
-										dest["flag"] = "";
+										dest["flag"] = "http://en.wikipedia.org/wiki/Los_Angeles#/media/File:Flag_of_Los_Angeles,_California.svg";
 
 
 
