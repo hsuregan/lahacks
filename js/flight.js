@@ -1,9 +1,9 @@
 //flights
 var flights =
 [
-	{distance: 10403, duration: 5000, flight_numbers: [30,31], flight_time: 100},
-	{distance: 10239, duration: 5000, flight_numbers: [32, 33], flight_time: 100},
-	{distance: 10290, duration: 5000, flight_numbers: [34, 35], flight_time: 100}
+	{distance: 10403, duration: 5000, flight_numbers: ["AA1188","CI1188"], flight_time: 100},
+	{distance: 10239, duration: 5000, flight_numbers: ["ZZ1188", "DE1188"], flight_time: 100},
+	{distance: 10290, duration: 5000, flight_numbers: ["DI1188", "CA1188"], flight_time: 100}
 ];
 //km
 
@@ -19,7 +19,7 @@ $(document).ready(function()
 			}
 			// console.log()
 			var content = (i==0) ? "" : "<hr >";
-			content = content + "<div class='row'><div class='col-md-6'><center><strong>Flight Numbers </strong><br />" + Flight_Numbers + "</center>" +"<div><strong>Distance</strong><br /> " + flights[i].distance + " KM </div></div>" +"<div class='col-md-6'>" +"<div><strong>Trip Duration</strong> " + flights[i].duration + " </div>" +"<div><strong>Flight Duration</strong> " + flights[i].flight_time + " </div></div></div>";
+			content = content + "<div class='row'><div class='col-md-6'><center><strong><u>Flight Numbers</u></strong><br />" + Flight_Numbers + "</center>" +"<div><strong><u>Distance</u></strong><br /> " + flights[i].distance + " KM </div></div>" +"<div class='col-md-6'>" +"<div><strong><u>Trip Duration</u></strong> " + flights[i].duration + "hrs </div>" +"<div><strong><u>Flight Duration</u></strong> " + flights[i].flight_time + "hrs </div></div></div>";
 
 
 			 $('#flights').append(content);
