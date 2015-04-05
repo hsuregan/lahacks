@@ -67,7 +67,7 @@
 				
 				if(dest["flag"].length != 0)
 				{
-					$('#details').append('<br /><iframe src="' + dest["flag"] + '"width="100%" height="450" margin="0" padding="0" border="0px" overflow="hidden" scrolling="no"></iframe>');
+					//$('#details').append('<br /><iframe src="' + dest["flag"] + '"width="100%" height="450" margin="0" padding="0" border="0px" overflow="hidden" scrolling="no"></iframe>');
 
 
 				}
