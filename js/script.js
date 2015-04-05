@@ -18,7 +18,7 @@
 					dest["Postal Code"] = 80930;
 										dest["website"] = "www.kaohsiung.com";
 										dest["flag"] = "http://en.wikipedia.org/wiki/Los_Angeles#/media/File:Flag_of_Los_Angeles,_California.svg";
-
+					dest["Abstract"] = "POOOOP Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ";
 
 
 					origin["weather"] = "sunny";
@@ -50,6 +50,7 @@
 								{
 									//alert(data[to]);
 									document.getElementById("currency").innerHTML = document.getElementById("currency").innerHTML + "<span style='font-size: 25px !important; padding-bottom: 10px !important'><br /> 1 " + from + " = " + data[to] + " " + to + "</span>";
+
 									//document.getElementById("currency").style.size = "25px";
 									//$('#currency').innerHTML = data[to];
 									//alert(ugh);

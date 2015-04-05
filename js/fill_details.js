@@ -38,6 +38,8 @@
 
 			function()
 			{
+				if(dest["Abstract"].length != 0)
+					$('#Abstract').append(dest["Abstract"]);
 
 				if(dest["Time Zone"].length != 0)
 					$('#time_zone').append("Time Zone: &nbsp;" + dest["Time Zone"]);
@@ -65,15 +67,9 @@
 				
 				if(dest["flag"].length != 0)
 				{
-					$('#flag').append('<iframe src="' + dest["flag"] + '"width="100%" height="500" margin="0" padding="0" border="none" overflow="hidden" scrolling="no"></iframe>');
+					$('#details').append('<br /><iframe src="' + dest["flag"] + '"width="100%" height="450" margin="0" padding="0" border="0px" overflow="hidden" scrolling="no"></iframe>');
 
 
-				}
-
-				else if(dest["flag"].length == 0)
-				{
-					var element = document.getElementById("wiki_images");
-					element.parentNode.removeChild(element);
 				}
 
 				//document.getElementsByTagName('website_link').innerHTML = "poop";//dest["website"];
